@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright 2013 Peergreen S.A.S. All rights reserved.
+ Proprietary and confidential.
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          version="2.0">
+    <jsp:useBean id="interval"
+                 scope="request"
+                 type="java.lang.String" />
+    <jsp:useBean id="uri"
+                 scope="request"
+                 type="java.lang.String" />
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+    <head>
+        <title>Peergreen SmartProbe</title>
+    </head>
+    <body>
+    <h1>SmartProbe Configuration</h1>
+    <form action="configure" method="get" >
+        <fieldset>
+            <legend>Configuration</legend>
+
+            <label>Change probing interval (in ms)</label><br/>was: <i>${interval}</i><br/>
+            <input type="text" placeholder="New interval (ms)" name="interval"/>
+            <br/>
+
+            <label>Change SmartThing Service URL</label><br/>was: <i>${uri}</i><br/>
+            <input type="text" placeholder="New location" name="uri"/>
+
+            <br/>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    </body>
+    </html>
+</jsp:root>

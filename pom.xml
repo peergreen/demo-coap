@@ -42,6 +42,7 @@
     <module>adapter</module>
     <module>smart-probe</module>
     <module>mock</module>
+    <module>smart-probe-webapp</module>
   </modules>
 
   <dependencies>
