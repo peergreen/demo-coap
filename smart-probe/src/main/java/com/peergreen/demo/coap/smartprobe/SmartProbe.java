@@ -57,11 +57,9 @@ public class SmartProbe implements Runnable  {
     private final List<Node> devices;
     private final List<Sensor> sensors;
 
-    @Property(name="smarthing-uri", mandatory=true)
     @ServiceProperty(name="smarthing-uri", mandatory=true)
     private String smartThingUri;
 
-    @Property(name="interval", mandatory=true)
     @ServiceProperty(name="interval", mandatory=true)
     private long interval;
 
